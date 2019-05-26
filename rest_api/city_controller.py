@@ -50,7 +50,7 @@ class City(Base):
         return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=4) 
 
 def get_session():
-    engine = create_engine('mysql://test:test111@localhost/test')
+    engine = create_engine('mysql://test:test@localhost/test')
     Base.metadata.bind = engine
     
     DBSession = sessionmaker()
